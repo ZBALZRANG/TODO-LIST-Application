@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #1a1a2e;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.top-heading {
+    text-align: center;
+    color: #e94560;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
+}
+
+form {
+    width: 100%;
+    max-width: 600px;
+    background: #16213e;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.input-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+#inputBox {
+    width: 75%;
+    height: 50px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    padding: 0 20px;
+    font-size: 1.1rem;
+    background: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+#inputBox:focus {
+    background: white;
+    box-shadow: 0 0 0 3px rgba(233, 69, 96, 0.3);
+}
+
+#add {
+    width: 20%;
+    height: 50px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    background-color: #e94560;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#add:hover {
+    background-color: #ff6b81;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+#add:active {
+    transform: translateY(0);
+}
+
+.list {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.item {
+    background-color: rgba(255, 255, 255, 0.95);
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    padding: 15px 20px;
+    margin: 10px 0;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.item p {
+    flex-basis: 80%;
+    color: #333;
+    word-break: break-word;
+}
+
+.icon-container {
+    display: flex;
+    gap: 10px;
+}
+
+.icon-container button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#check {
+    color: #4CAF50;
+}
+
+#check:hover {
+    background: rgba(76, 175, 80, 0.1);
+}
+
+#delete {
+    color: #e94560;
+}
+
+#delete:hover {
+    background: rgba(233, 69, 96, 0.1);
+}
+
+.fade {
+    opacity: 0.7;
+}
+
+.deleted-text span {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 1.5rem 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    form {
+        padding: 1.5rem;
+    }
+    
+    .input-container {
+        flex-direction: column;
+    }
+    
+    #inputBox, #add {
+        width: 100%;
+    }
+    
+    #add {
+        margin-top: 10px;
+        margin-left: 0;
+    }
+}
+.input-container{
+    flex-basis: 20%;
+}
+
+.icon-container button{
+    background-color: transparent;
+    border: none;
+    font-size: x-large;
+}
+.fa-solid{
+    color:rgb(108, 71, 28);
+    cursor: pointer;
+    font-size: x-large;
+    transition: all 0.3s;
+}
+.fa-solid:hover{
+    transform: scale(1.3);
+}
+.hidden{
+    visibility: hidden;
+}
+.deleted-text{
+    text-decoration: line-through;
+    color: rgb(122, 36, 36);
+}
+.deleted-text span{
+    color: black;
+}
+.fade{
+    background-color:  rgb(117, 115, 115);
+}
